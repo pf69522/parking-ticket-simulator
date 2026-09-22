@@ -12,7 +12,17 @@ class PoliceOfficer:
         self.badge_number = badge_number
 
     def inspect(self, car, meter):
-        """Inspect a parked car and return a ticket if needed."""
+        """
+        Inspect a parked car and its parking meter.
+
+        Args:
+            car: The ParkedCar object being inspected.
+            meter: The ParkingMeter object for the car.
+
+        Returns:
+            A ParkingTicket if the car is illegally parked.
+            Otherwise, returns None.
+        """
         if car.minutes_parked <= meter.minutes_purchased:
             return None
 
